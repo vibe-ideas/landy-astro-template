@@ -343,29 +343,12 @@
     mobileMenuClose?.addEventListener('click', closeMobileMenu);
     mobileMenuBackdrop?.addEventListener('click', closeMobileMenu);
 
-    // Smooth scroll functionality
-    function smoothScroll(targetId: string) {
-      const element = document.getElementById(targetId);
-      if (element) {
-        const headerHeight = 80;
-        const targetPosition = element.offsetTop - headerHeight;
-        
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-      }
-      closeMobileMenu();
-    }
-
-    // Add click event listeners to all scroll links
+    // Remove the local scroll logic - use global scroll system instead
+    // Add click event listeners only to close mobile menu
     document.querySelectorAll('[data-scroll-to]').forEach(link => {
       link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = (e.currentTarget as HTMLElement).getAttribute('data-scroll-to');
-        if (targetId) {
-          smoothScroll(targetId);
-        }
+        // Let the global scroll system handle the scrolling
+        closeMobileMenu();
       });
     });
   });

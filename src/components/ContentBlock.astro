@@ -222,7 +222,7 @@ const { icon, title, content, section, button, id, direction } = Astro.props;
 
 <script>
   // Scroll functionality
-  function scrollToSection(id: string) {
+  function scrollToSection(id) {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({
@@ -232,7 +232,7 @@ const { icon, title, content, section, button, id, direction } = Astro.props;
   }
 
   // Make scrollToSection available globally
-  (window as any).scrollToSection = scrollToSection;
+  window.scrollToSection = scrollToSection;
 
   // Intersection Observer for fade-in animation
   document.addEventListener('DOMContentLoaded', () => {

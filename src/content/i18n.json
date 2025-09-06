@@ -1,0 +1,120 @@
+{
+  "en": {
+    "intro": {
+      "title": "Landing page template for developers & startups",
+      "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes."
+    },
+    "middleBlock": {
+      "title": "Introduce your product quickly & effectively",
+      "text": "Landy comes with multi-lingual support, all components are easy to customize and edit. Landy includes a landing page with a contact form and a blog page with a comment section."
+    },
+    "about": {
+      "title": "Light, fast & responsive",
+      "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+      "section": [
+        {
+          "title": "Why Antd?",
+          "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
+          "icon": "notes.svg"
+        },
+        {
+          "title": "Why styled-components?",
+          "content": "Styled Components gives you total control over your components.",
+          "icon": "notes.svg"
+        }
+      ]
+    },
+    "mission": {
+      "title": "We are driven to make this world",
+      "text": "We strive to build working relationships that are based on trust, respect, and cooperation. We are committed to providing the highest level of service and support to our clients."
+    },
+    "product": {
+      "title": "Increase your productivity",
+      "text": "A desktop application that helps you manage your tasks, track your time, and stay organized. Available for Windows, macOS, and Linux."
+    },
+    "contact": {
+      "title": "Let's get in touch",
+      "text": "We'd love to hear from you. Whether you have a question about features, trials, pricing, need a demo, or anything else, our team is ready to answer all your questions."
+    },
+    "footer": {
+      "contactTitle": "Contact",
+      "contactLarge": "Tell us everything",
+      "contactText": "Do you have any question? Feel free to reach out.",
+      "contactButton": "Let's Chat",
+      "addressTitle": "Address",
+      "addressLine1": "Rancho Santa Margarita",
+      "addressLine2": "2131 Elk Street",
+      "addressLine3": "California",
+      "policyTitle": "Policy",
+      "policyLink1": "Application Security",
+      "policyLink2": "Software Principles",
+      "companyTitle": "Company",
+      "companyLink1": "About",
+      "companyLink2": "Blog",
+      "companyLink3": "Press",
+      "companyLink4": "Careers & Culture",
+      "supportTitle": "Support Center",
+      "supportLink1": "Customer Support",
+      "languageTitle": "Language"
+    }
+  },
+  "es": {
+    "intro": {
+      "title": "Plantilla de página de aterrizaje para desarrolladores y startups",
+      "text": "Plantillas bellamente diseñadas usando React.js, ant design y styled-components! Ahorra semanas de tiempo y construye tu página de aterrizaje en minutos."
+    },
+    "middleBlock": {
+      "title": "Presenta tu producto rápida y efectivamente",
+      "text": "Landy viene con soporte multiidioma, todos los componentes son fáciles de personalizar y editar. Landy incluye una página de aterrizaje con un formulario de contacto y una página de blog con una sección de comentarios."
+    },
+    "about": {
+      "title": "Ligero, rápido y responsivo",
+      "text": "Esta plantilla está lista para usar, así que no necesitas cambiar nada a nivel de componente, a menos que quieras personalizar el estilo predeterminado.",
+      "section": [
+        {
+          "title": "¿Por qué Antd?",
+          "content": "Ant Design es una biblioteca de interfaz de usuario de React que tiene muchos componentes fáciles de usar para construir interfaces elegantes.",
+          "icon": "notes.svg"
+        },
+        {
+          "title": "¿Por qué styled-components?",
+          "content": "Styled Components te da control total sobre tus componentes.",
+          "icon": "notes.svg"
+        }
+      ]
+    },
+    "mission": {
+      "title": "Estamos motivados para hacer de este mundo",
+      "text": "Nos esforzamos por construir relaciones de trabajo basadas en la confianza, el respeto y la cooperación. Estamos comprometidos a proporcionar el más alto nivel de servicio y soporte a nuestros clientes."
+    },
+    "product": {
+      "title": "Aumenta tu productividad",
+      "text": "Una aplicación de escritorio que te ayuda a gestionar tus tareas, hacer seguimiento de tu tiempo y mantenerte organizado. Disponible para Windows, macOS y Linux."
+    },
+    "contact": {
+      "title": "Pongámonos en contacto",
+      "text": "Nos encantaría saber de ti. Ya sea que tengas una pregunta sobre características, pruebas, precios, necesites una demostración o cualquier otra cosa, nuestro equipo está listo para responder todas tus preguntas."
+    },
+    "footer": {
+      "contactTitle": "Contacto",
+      "contactLarge": "Cuéntanos todo",
+      "contactText": "¿Tienes alguna pregunta? No dudes en contactarnos.",
+      "contactButton": "Hablemos",
+      "addressTitle": "Dirección",
+      "addressLine1": "Rancho Santa Margarita",
+      "addressLine2": "2131 Elk Street",
+      "addressLine3": "California",
+      "policyTitle": "Política",
+      "policyLink1": "Seguridad de Aplicaciones",
+      "policyLink2": "Principios de Software",
+      "companyTitle": "Empresa",
+      "companyLink1": "Acerca de",
+      "companyLink2": "Blog",
+      "companyLink3": "Prensa",
+      "companyLink4": "Carreras y Cultura",
+      "supportTitle": "Centro de Soporte",
+      "supportLink1": "Soporte al Cliente",
+      "languageTitle": "Idioma"
+    }
+  }
+}
