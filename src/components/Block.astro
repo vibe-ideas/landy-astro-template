@@ -1,0 +1,61 @@
+---
+export interface Props {
+  title: string;
+  content: string;
+  class?: string;
+}
+
+const { title, content, class: className } = Astro.props;
+---
+
+<div class={`block-container ${className || ''}`}>
+  <h6>{title}</h6>
+  <div class="text-wrapper">
+    <p class="content">{content}</p>
+  </div>
+</div>
+
+<style>
+  .block-container {
+    position: relative;
+    max-width: 700px;
+  }
+
+  .block-container h6 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #18216d;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  @media screen and (max-width: 768px) {
+    .block-container h6 {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .block-container h6 {
+      font-size: 1.75rem;
+    }
+  }
+
+  .text-wrapper {
+    border-radius: 3rem;
+    max-width: 400px;
+  }
+
+  .content {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #18216d;
+  }
+
+  @media screen and (max-width: 768px) {
+    .content {
+      font-size: 0.9rem;
+    }
+  }
+</style>

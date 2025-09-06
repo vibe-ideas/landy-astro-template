@@ -1,0 +1,28 @@
+---
+export interface Props {
+  src: string;
+  width: string;
+  height: string;
+  alt?: string;
+  class?: string;
+}
+
+const { src, width, height, alt, class: className } = Astro.props;
+---
+
+<img 
+  src={`/img/svg/${src}`} 
+  alt={alt || src} 
+  width={width} 
+  height={height}
+  class={className}
+  loading="lazy"
+/>
+
+<style>
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+</style>

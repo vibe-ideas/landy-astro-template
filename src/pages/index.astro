@@ -1,0 +1,237 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContentBlock from '../components/ContentBlock.astro';
+import MiddleBlock from '../components/MiddleBlock.astro';
+
+// Import content files
+import IntroContent from '../content/IntroContent.json';
+import MiddleBlockContent from '../content/MiddleBlockContent.json';
+import AboutContent from '../content/AboutContent.json';
+import MissionContent from '../content/MissionContent.json';
+import ProductContent from '../content/ProductContent.json';
+import ContactContent from '../content/ContactContent.json';
+---
+
+<Layout title="Landy - React Template to Astro">
+	<main>
+		<div class="container">
+			<!-- Intro Section -->
+			<ContentBlock
+				direction="right"
+				title={IntroContent.title}
+				content={IntroContent.text}
+				button={IntroContent.button}
+				icon="developer.svg"
+				id="intro"
+			/>
+
+			<!-- Middle Block Section -->
+			<MiddleBlock
+				title={MiddleBlockContent.title}
+				content={MiddleBlockContent.text}
+				button={MiddleBlockContent.button}
+			/>
+
+			<!-- About Section -->
+			<ContentBlock
+				direction="left"
+				title={AboutContent.title}
+				content={AboutContent.text}
+				section={AboutContent.section}
+				icon="graphs.svg"
+				id="about"
+			/>
+
+			<!-- Mission Section -->
+			<ContentBlock
+				direction="right"
+				title={MissionContent.title}
+				content={MissionContent.text}
+				icon="product-launch.svg"
+				id="mission"
+			/>
+
+			<!-- Product Section -->
+			<ContentBlock
+				direction="left"
+				title={ProductContent.title}
+				content={ProductContent.text}
+				icon="waving.svg"
+				id="product"
+			/>
+
+			<!-- Contact Section - Will be implemented as React Island -->
+			<section id="contact" class="contact-section">
+				<div class="contact-content">
+					<h2>{ContactContent.title}</h2>
+					<p>{ContactContent.text}</p>
+					<div class="contact-placeholder">
+						<h3>🚀 Next Phase: Interactive Contact Form</h3>
+						<p><strong>Features to implement:</strong></p>
+						<ul>
+							<li>React Contact Form as Astro Island</li>
+							<li>Form validation with React hooks</li>
+							<li>Email sending functionality</li>
+							<li>Interactive UI components</li>
+						</ul>
+						<p><em>This will complete the React-to-Astro migration with full interactivity</em></p>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- Scroll to Top Button -->
+		<button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+			↑
+		</button>
+	</main>
+</Layout>
+
+<style>
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+
+	.contact-section {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		padding: 6rem 0;
+		text-align: center;
+		margin: 4rem 0 0 0;
+	}
+
+	.contact-content {
+		max-width: 700px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+
+	.contact-content h2 {
+		color: white;
+		font-size: 2.5rem;
+		font-weight: 600;
+		margin-bottom: 1.5rem;
+		line-height: 1.2;
+	}
+
+	.contact-content p {
+		color: white;
+		font-size: 1rem;
+		line-height: 1.6;
+		margin-bottom: 2rem;
+		opacity: 0.9;
+	}
+
+	.contact-placeholder {
+		background: rgba(255, 255, 255, 0.95);
+		padding: 2.5rem;
+		border-radius: 12px;
+		box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+		margin-top: 2rem;
+		text-align: left;
+	}
+
+	.contact-placeholder h3 {
+		color: #2e186a;
+		margin: 0 0 1rem 0;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	.contact-placeholder p {
+		margin: 0.5rem 0;
+		color: #333;
+		opacity: 1;
+	}
+
+	.contact-placeholder strong {
+		color: #2e186a;
+	}
+
+	.contact-placeholder ul {
+		margin: 1rem 0;
+		padding-left: 1.5rem;
+		color: #555;
+	}
+
+	.contact-placeholder li {
+		margin: 0.5rem 0;
+		line-height: 1.4;
+	}
+
+	.contact-placeholder em {
+		color: #666;
+		font-style: italic;
+		display: block;
+		text-align: center;
+		margin-top: 1.5rem;
+		padding-top: 1rem;
+		border-top: 2px solid #e0e0e0;
+	}
+
+	.scroll-to-top {
+		position: fixed;
+		bottom: 2rem;
+		right: 2rem;
+		background: #2e186a;
+		color: white;
+		border: none;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		font-size: 1.5rem;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		opacity: 0;
+		visibility: hidden;
+		z-index: 1000;
+		box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+	}
+
+	.scroll-to-top.visible {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.scroll-to-top:hover {
+		background: #ff825c;
+		transform: translateY(-2px) scale(1.05);
+		box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+	}
+
+	@media screen and (max-width: 768px) {
+		.contact-content h2 {
+			font-size: 2rem;
+		}
+		
+		.contact-placeholder {
+			padding: 2rem;
+			margin: 1.5rem 1rem 0 1rem;
+		}
+
+		.contact-placeholder h3 {
+			font-size: 1.3rem;
+		}
+	}
+</style>
+
+<script>
+	// Scroll to top functionality
+	const scrollToTopBtn = document.getElementById('scroll-to-top');
+	
+	window.addEventListener('scroll', () => {
+		if (window.pageYOffset > 300) {
+			scrollToTopBtn?.classList.add('visible');
+		} else {
+			scrollToTopBtn?.classList.remove('visible');
+		}
+	});
+	
+	scrollToTopBtn?.addEventListener('click', () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+	});
+</script>

@@ -1,0 +1,127 @@
+---
+import Button from './Button.astro';
+
+export interface Props {
+  title: string;
+  content: string;
+  button?: string;
+  id?: string;
+}
+
+const { title, content, button, id } = Astro.props;
+---
+
+<section class="middle-block-section" id={id}>
+  <div class="slide-container">
+    <div class="content-row">
+      <div class="content-wrapper">
+        <div class="content-col">
+          <h6>{title}</h6>
+          <p class="content">{content}</p>
+          {button && (
+            <Button onClick="scrollToSection('mission')">
+              {button}
+            </Button>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .middle-block-section {
+    position: relative;
+    padding: 5.25rem 0;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .middle-block-section {
+      padding: 3rem 0;
+    }
+  }
+
+  .slide-container {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+
+  .slide-container.slide-up {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .content-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-wrapper {
+    position: relative;
+    max-width: 570px;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .content-col {
+    width: 100%;
+  }
+
+  .content-wrapper h6 {
+    color: #18216d;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+  }
+
+  @media screen and (max-width: 768px) {
+    .content-wrapper h6 {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .content-wrapper h6 {
+      font-size: 1.75rem;
+    }
+  }
+
+  .content {
+    margin: 1.5rem 0 2rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #18216d;
+  }
+
+  @media screen and (max-width: 768px) {
+    .content {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+<script>
+  // Intersection Observer for slide-up animation
+  document.addEventListener('DOMContentLoaded', () => {
+    const slideElements = document.querySelectorAll('.slide-container');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('slide-up');
+        }
+      });
+    }, {
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px'
+    });
+
+    slideElements.forEach(element => {
+      observer.observe(element);
+    });
+  });
+</script>

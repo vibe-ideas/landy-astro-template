@@ -1,0 +1,424 @@
+---
+// Footer component for Astro
+// Converted from React Footer component
+---
+
+<footer>
+  <!-- Main Footer Section -->
+  <section class="footer-section">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Contact Column -->
+        <div class="footer-column">
+          <h3 class="footer-language">Contact</h3>
+          <h4 class="footer-large">Tell us everything</h4>
+          <p class="footer-para">
+            Do you have any question? Feel free to reach out.
+          </p>
+          <a href="mailto:l.qqbadze@gmail.com" class="footer-chat">
+            Let's Chat
+          </a>
+
+          <!-- Address Section -->
+          <div class="address-section">
+            <h3 class="footer-language">Address</h3>
+            <p class="footer-para">Rancho Santa Margarita</p>
+            <p class="footer-para">2131 Elk Street</p>
+            <p class="footer-para">California</p>
+          </div>
+        </div>
+
+        <!-- Policy Column -->
+        <div class="footer-column">
+          <h3 class="footer-title">Policy</h3>
+          <a href="/" class="footer-large-link">Application Security</a>
+          <a href="/" class="footer-large-link">Software Principles</a>
+
+          <!-- Company Section -->
+          <div class="company-section">
+            <h3 class="footer-title">Company</h3>
+            <a href="/" class="footer-large-link">About</a>
+            <a href="/" class="footer-large-link">Blog</a>
+            <a href="/" class="footer-large-link">Press</a>
+            <a href="/" class="footer-large-link">Careers & Culture</a>
+          </div>
+        </div>
+
+        <!-- Support Column -->
+        <div class="footer-column">
+          <a href="/" class="footer-large-link">Support Center</a>
+          <a href="/" class="footer-large-link">Customer Support</a>
+
+          <!-- Language Switcher -->
+          <div class="language-section">
+            <label class="footer-label">Language</label>
+            <div class="language-switch-container">
+              <button class="language-switch" data-lang="en">
+                <img 
+                  src="/img/svg/united-states.svg" 
+                  alt="English" 
+                  width="30" 
+                  height="30" 
+                />
+              </button>
+              <button class="language-switch" data-lang="es">
+                <img 
+                  src="/img/svg/spain.svg" 
+                  alt="Spanish" 
+                  width="30" 
+                  height="30" 
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Footer Section -->
+  <section class="footer-extra">
+    <div class="container border-top">
+      <div class="footer-bottom">
+        <!-- Logo -->
+        <a href="/" class="footer-logo">
+          <img 
+            src="/img/svg/logo.svg" 
+            alt="Logo" 
+            width="101" 
+            height="64" 
+          />
+        </a>
+
+        <!-- Social Links -->
+        <div class="footer-social">
+          <a 
+            href="https://github.com/Adrinlol/create-react-app-adrinlol" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="social-link"
+          >
+            <img src="/img/svg/github.svg" alt="GitHub" width="25" height="25" />
+          </a>
+          <a 
+            href="https://twitter.com/Adrinlolx" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+            class="social-link"
+          >
+            <img src="/img/svg/twitter.svg" alt="Twitter" width="25" height="25" />
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/lasha-kakabadze/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            class="social-link"
+          >
+            <img src="/img/svg/linkedin.svg" alt="LinkedIn" width="25" height="25" />
+          </a>
+          <a 
+            href="https://medium.com/@lashakakabadze/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Medium"
+            class="social-link"
+          >
+            <img src="/img/svg/medium.svg" alt="Medium" width="25" height="25" />
+          </a>
+          <a 
+            href="https://ko-fi.com/Y8Y7H8BNJ" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="kofi-link"
+          >
+            <img
+              height="36"
+              src="https://storage.ko-fi.com/cdn/kofi3.png?v=3"
+              alt="Buy Me a Coffee at ko-fi.com"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+
+<style>
+  .footer-section {
+    background: #f8f9fb;
+    padding: 5rem 0 3rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1.5fr;
+    gap: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-language {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #18216d;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #18216d;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  .footer-large {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #18216d;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .footer-large-link {
+    font-size: 1rem;
+    color: #18216d;
+    text-decoration: none;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+    font-weight: 500;
+  }
+
+  .footer-large-link:hover {
+    color: #2c3e95;
+  }
+
+  .footer-para {
+    font-size: 1rem;
+    color: #18216d;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-chat {
+    background: #18216d;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+
+  .footer-chat:hover {
+    background: #2c3e95;
+    transform: translateY(-2px);
+  }
+
+  .address-section {
+    margin-top: 3rem;
+  }
+
+  .company-section {
+    margin-top: 3rem;
+  }
+
+  .language-section {
+    margin-top: 2rem;
+  }
+
+  .footer-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #18216d;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .language-switch-container {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .language-switch {
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .language-switch:hover {
+    border-color: #18216d;
+    transform: scale(1.1);
+  }
+
+  .language-switch.active {
+    border-color: #18216d;
+  }
+
+  /* Bottom Footer */
+  .footer-extra {
+    background: #f8f9fb;
+    padding: 0 0 3rem;
+  }
+
+  .border-top {
+    border-top: 1px solid rgba(24, 33, 109, 0.1);
+    padding-top: 3rem;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .footer-logo {
+    transition: transform 0.3s ease;
+  }
+
+  .footer-logo:hover {
+    transform: scale(1.05);
+  }
+
+  .footer-social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(24, 33, 109, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .social-link:hover {
+    background: #18216d;
+    transform: translateY(-2px);
+  }
+
+  .social-link:hover img {
+    filter: brightness(0) invert(1);
+  }
+
+  .kofi-link {
+    transition: transform 0.3s ease;
+  }
+
+  .kofi-link:hover {
+    transform: translateY(-2px);
+  }
+
+  .kofi-link img {
+    height: 36px;
+    border: 0;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .footer-column:nth-child(3) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-section {
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .footer-large {
+      font-size: 2rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    .address-section,
+    .company-section {
+      margin-top: 2rem;
+    }
+
+    .language-section {
+      margin-top: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-social {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+</style>
+
+<script>
+  // Language switcher functionality (placeholder)
+  document.addEventListener('DOMContentLoaded', function() {
+    const languageSwitches = document.querySelectorAll('.language-switch');
+    
+    languageSwitches.forEach(switch_ => {
+      switch_.addEventListener('click', function() {
+        // Remove active class from all switches
+        languageSwitches.forEach(s => s.classList.remove('active'));
+        // Add active class to clicked switch
+        this.classList.add('active');
+        
+        const lang = this.getAttribute('data-lang');
+        console.log(`Language switched to: ${lang}`);
+        // TODO: Implement actual language switching functionality
+      });
+    });
+
+    // Set default language (English)
+    const defaultLang = document.querySelector('.language-switch[data-lang="en"]');
+    if (defaultLang) {
+      defaultLang.classList.add('active');
+    }
+  });
+</script>

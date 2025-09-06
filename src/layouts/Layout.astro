@@ -1,0 +1,92 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Landy - React Landing Page Template made with Astro" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    
+    <!-- Preload fonts -->
+    <link rel="preload" href="/fonts/Motiva-Sans-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Motiva-Sans-Light.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Motiva-Sans-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Motiva-Sans-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <Header />
+    
+    <!-- Main Content -->
+    <slot />
+    
+    <!-- Footer -->
+    <Footer />
+    
+    <!-- Global styles -->
+    <style is:global>
+      @font-face {
+        font-family: "Motiva Sans";
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+        src: url("/fonts/Motiva-Sans-Light.woff2") format("woff2");
+      }
+      
+      @font-face {
+        font-family: "Motiva Sans";
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src: url("/fonts/Motiva-Sans-Regular.woff2") format("woff2");
+      }
+      
+      @font-face {
+        font-family: "Motiva Sans";
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+        src: url("/fonts/Motiva-Sans-Medium.woff2") format("woff2");
+      }
+      
+      @font-face {
+        font-family: "Motiva Sans";
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+        src: url("/fonts/Motiva-Sans-Bold.woff2") format("woff2");
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: "Motiva Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height: 1.6;
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </body>
+</html>
